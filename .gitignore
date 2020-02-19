@@ -1,0 +1,6 @@
+statefiles/
+.vscode/
+venv/
+*.tfstate
+secrets.sh
+migration-enriched.json
