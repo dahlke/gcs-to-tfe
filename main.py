@@ -63,7 +63,7 @@ if __name__ == "__main__":
     api = TFE(TFE_TOKEN)
     api.set_organization(TFE_ORG)
 
-    workspaces = api.workspaces.lst()
+    # workspaces = api.workspaces.lst()
     # oauth_clients = api.oauth_clients.lst()
     # oauth_client = api.oauth_clients.lst()[0]["data"]["id"]
     # print(oauth_clients)
@@ -119,7 +119,7 @@ if __name__ == "__main__":
         }
 
         # State versions cannot be modified if the workspace isn't locked
-        api.workspaces.lock( ws_id, {"reason": "migration script"})
+        api.workspaces.lock(ws_id, {"reason": "migration script"})
 
         # Create the state version
         api.state_versions.create(ws_id, create_state_version_payload)
